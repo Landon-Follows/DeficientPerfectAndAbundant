@@ -51,4 +51,12 @@ while true {
     
 }
 
+for factor in 1...number {
+    if number % factor == 0 {
+       sumOfFactors += factor
+    }
+}
+
+
+
 
