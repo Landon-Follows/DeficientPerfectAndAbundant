@@ -50,13 +50,23 @@ while true {
     break
     
 }
-
-for factor in 1...number {
-    if number % factor == 0 {
-       sumOfFactors += factor
+if number == 1 {
+    print("1 is a deficient number.")
+} else {
+    for factor in 1...number-1 {
+        if number % factor == 0 {
+           sumOfFactors += factor
+        }
     }
 }
 
-
-
+if sumOfFactors > number {
+    print("\(number) is an abundant number")
+}
+if sumOfFactors < number && number != 1 {
+    print("\(number) is a deficient number.")
+}
+if sumOfFactors == number {
+    print("\(number) is a perfect number.")
+}
 
